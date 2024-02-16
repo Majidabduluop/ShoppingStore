@@ -1,0 +1,17 @@
+/* .char {
+  transform: translateY(115px);
+  transition: transform 0.5s;
+} */
+
+.buttonquick {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  top: 35%;
+  left: 74%;
+}
+
+.w-full:hover .buttonquick {
+  opacity: 100;
+}
