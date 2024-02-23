@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "./picture/logo.png";
-import { IoIosHeartEmpty } from "react-icons/io";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -10,6 +9,7 @@ import { MdAccountCircle } from "react-icons/md";
 import { FiShoppingCart } from "react-icons/fi";
 import { Tooltip } from "@mui/material";
 import { Link } from "react-router-dom";
+// import "../../App.css";
 
 function Navbar() {
   const [cartopen, setcartopen] = useState(false);
@@ -17,8 +17,8 @@ function Navbar() {
 
   const [textIndex, setTextIndex] = useState(0);
   const texts = [
-    "25th Birthday Sale: We're launching deals like confetti! Shop Our Sale",
     "Top 10 Casual Shoes for Spring Shop Our Guide",
+    "Byu one get 50% Discount for another Product",
   ];
 
   useEffect(() => {
@@ -37,64 +37,58 @@ function Navbar() {
   };
   return (
     <>
-      <div className="">
-        <div className="bg-[#14284d] p-2 text-white font-medium text-center">
-          <h1 className="text-base font-sans sliding-text">
-            {texts[textIndex]}
-          </h1>
+      <div className="bg-[#14284d] p-2 text-white font-medium text-center">
+        <p className="text-base font-sans sliding-text m-0">
+          {texts[textIndex]}
+        </p>
+      </div>
+
+      <nav className="flex justify-between md:mt-0 mt-1 items-center w-[92%]  mx-auto">
+        <div className="w-[14%] md:w-[8%] ">
+          <img className="w-full object-fill" src={logo} alt="error" />
         </div>
+        {/* <div className="w-[3vw] h-[2vh] absolute top-5 left-[13%]">
+          <input
+            placeholder="Search for shoes, clothes, etc"
+            className="placeholder-transparent w-[100%] h-[100%] px-12 py-2 rounded  border border-black"
+          />
+        </div> */}
+        {/* <div className="lg:left-[130px] lg:top-[82px] md:left-28 md:top-[80px] xs:top-[61px] xs:left-[67px] absolute top-[82px] left-[186px]">
+            <GoSearch className="xs:text-[14px]" />
+          </div> */}
 
-        <div className="flex flex-row justify-around">
-          <div className="w-[8%] absolute top-[44px] left-10">
-            <img className=" w-full object-fill" src={logo} alt="error" />
-          </div>
-          <div className="absolute top-[68px] left-44">
-            <input
-              placeholder="Search for shoes, clothes, etc"
-              className="px-12 py-2 rounded-lg  border border-black"
-            />
-          </div>
-          <div className="absolute top-[82px] left-[186px]">
-            <GoSearch />
-          </div>
-
-          <div className="flex flex-row ml-96 absolute top-[36px] right-[70px] ">
-            <div>
+        <div className="">
+          <ul className="flex flex-row md:gap-[2vw] gap-[4vw]">
+            <li>
               <Link to={"/"}>
-                <p className="font-semibold text-lg hover:text-blue-600 mr-6 mt-[34px] subpixel-antialiased">
+                <p className="font-semibold  hover:text-blue-600 subpixel-antialiased">
                   Home
                 </p>
               </Link>
-            </div>
-            <div>
+            </li>
+            <li>
               <Link to={"/about"}>
-                <p className="font-semibold text-lg hover:text-blue-600 mr-6 mt-[34px] subpixel-antialiased">
+                <p className="font-semibold hover:text-blue-600 subpixel-antialiased">
                   About us
                 </p>
               </Link>
-            </div>
+            </li>
 
-            <div className="mt-8">
+            <li className="">
               <button className="font-semibold font-inter">
                 {" "}
-                <MdAccountCircle className="text-3xl" />
+                <MdAccountCircle className="text-2xl md:text-3xl" />
               </button>
-            </div>
+            </li>
 
-            <Tooltip title="Your Cart">
-              <div onClick={openbasket} className="mt-9 ml-3 cursor-pointer  ">
-                <FiShoppingCart className="text-black text-2xl" />
-              </div>
-            </Tooltip>
-            <div className="mt-[35px] ml-2 font-inter">
-              <p>CART</p>
-            </div>
-            <div className="font-bold mt-[35px] ml-1">
-              <span>{bag.length}</span>
-            </div>
-          </div>
+            <li onClick={openbasket} className="cursor-pointer  flex">
+              <FiShoppingCart className="text-black text-xl mt-1 mr-1" />
+              <p className="font-semibold">CART</p>
+              <span className="font-semibold">{bag.length}</span>
+            </li>
+          </ul>
         </div>
-      </div>
+      </nav>
     </>
   );
 }

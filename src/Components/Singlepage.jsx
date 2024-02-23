@@ -14,26 +14,24 @@ function Singlepage() {
   const dispatch = useDispatch();
 
   return (
-    <div className="mb-[570px] mt-20">
+    <>
       {Details.filter((item) => item.id === paramsid.id).map((single) => (
-        <div className="relative flex" key={single.id}>
-          <div className="absolute top-[60px] left-[70px] w-[40%] h-[85vh] rounded">
+        <div className="" key={single.id}>
+          <div className="w-[80%] mx-auto mt-20 h-[80vh] rounded">
             <img className="w-full h-full object-contain" src={single.img} />
           </div>
-          <div className="absolute top-[150px] right-[540px]">
-            <p className="font-bold font-sans text-2xl text-black">
+          <div className="text-center mt-4">
+            <p className="font-bold font-sans text-xl text-black ">
               {single.name}
             </p>
-          </div>
-          <div className="absolute top-[200px] left-[510px] overflow-hidden">
-            <p className="font-normal text-base font-sans">{single.text}</p>
-          </div>
-          <div className="absolute top-[270px] left-[510px] overflow-hidden">
+
+            <p className="font-thin text-sm font-sans mt-0.5">{single.text}</p>
             <p className="font-normal text-base font-sans text-black">
               Type : {single.type}
             </p>
           </div>
-          <div className="absolute top-[320px] left-[510px] overflow-hidden">
+
+          <div className="text-center relative">
             {single.size ? (
               <>
                 <label
@@ -47,7 +45,7 @@ function Singlepage() {
                   name="size"
                   value={size}
                   onChange={(e) => setsize(e.target.value)}
-                  className="bg-gray-50  mt-1  text-black text-sm rounded-lg block  py-1.5"
+                  className="bg-gray-50  absolute sm:top-8 sm:left-[40%] 2xl:left-[47%] top-8 left-[35%] md:top-8 md:left-[42%] lg:left-[44%]  text-black text-sm rounded-lg py-1.5 "
                 >
                   <option value="">Select Size</option>
                   {single.size?.map((size) => (
@@ -70,7 +68,7 @@ function Singlepage() {
                   name="size"
                   value={size}
                   onChange={(e) => setsize(e.target.value)}
-                  className="bg-gray-50  mt-1  text-black text-sm rounded-lg block  py-1.5"
+                  className="bg-gray-50  absolute top-8 left-[35%] sm:top-8 2xl:left-[47%] sm:left-[40%] md:top-8 md:left-[42%] lg:left-[44%]  text-black text-sm rounded-lg py-1.5"
                 >
                   <option value="">Select Size</option>
                   {single.size?.map((size) => (
@@ -82,7 +80,7 @@ function Singlepage() {
               </>
             )}
           </div>
-          <div className="absolute top-[400px] left-[510px] overflow-hidden">
+          <div className="text-center relative mt-14">
             {single.color ? (
               <>
                 <label
@@ -96,7 +94,7 @@ function Singlepage() {
                   name="color"
                   value={color}
                   onChange={(e) => setcolor(e.target.value)}
-                  className="bg-gray-50  mt-1  text-black text-sm rounded-lg block  py-1.5"
+                  className="bg-gray-50 absolute top-6 left-[35%] sm:top-8 sm:left-[40%] 2xl:left-[47%] md:top-8 md:left-[42%] lg:left-[44%] text-black text-sm rounded-lg block  py-1.5"
                 >
                   <option value="">Select Color</option>
                   {single.color?.map((color) => (
@@ -119,7 +117,7 @@ function Singlepage() {
                   name="color"
                   value={color}
                   onChange={(e) => setcolor(e.target.value)}
-                  className="bg-gray-50  mt-1  text-black text-sm rounded-lg block  py-1.5"
+                  className="bg-gray-50  absolute 2xl:left-[47%] top-6 left-[35%] sm:top-8 sm:left-[40%] md:top-8 md:left-[42%] lg:left-[44%] text-black text-sm rounded-lg block  py-1.5"
                 >
                   <option value="">Select Color</option>
                   {single.color?.map((color) => (
@@ -148,14 +146,14 @@ function Singlepage() {
                   })
                 )
               }
-              className="absolute border hover:bg-gray-500 py-1 px-6 rounded-lg bg-[#14284d] text-white top-[485px] left-[510px] font-nono  text-base"
+              className="mt-16 lg:ml-[44%] 2xl:ml-[47%] ml-[34%] sm:ml-[40%] md:ml-[42%] border hover:bg-gray-500 py-2 px-4 rounded-lg bg-[#14284d] text-white font-nono text-base"
             >
               Add to Basket
             </button>
           </Tooltip>
         </div>
       ))}
-    </div>
+    </>
   );
 }
 

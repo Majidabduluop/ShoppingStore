@@ -21,7 +21,7 @@ function Slider() {
 
   return (
     <>
-      <div className="relative">
+      <div className="relative mt-10">
         <div className="flex flex-row">
           {sliderData.map((item) => (
             <div
@@ -32,7 +32,7 @@ function Slider() {
                   : "opacity-0 duration-700 ease-in-out scale-95"
               }
             >
-              <div className="w-full h-[88vh]">
+              <div className="w-full h-[50vh] md:h-[86vh]">
                 {parseInt(item.id) === slide && (
                   <img
                     className="w-full object-cover h-full"
@@ -41,16 +41,11 @@ function Slider() {
                   />
                 )}
               </div>
-              <div>
-                <p className="text-white text-4xl font-inter font-bold">
-                  {parseInt(item.id) === slide && item.text}
-                </p>
-              </div>
             </div>
           ))}
         </div>
 
-        <div className="absolute flex bottom-10 left-[45%] mb-3">
+        <div className="absolute flex bottom-6 left-[40%] mb-3 md:left-[47%]">
           {sliderData.map((dot, index) => (
             <div className="mr-4">
               <div
@@ -65,19 +60,19 @@ function Slider() {
             </div>
           ))}
         </div>
-        <div className="absolute bg-gray-50 p-5 rounded-full top-[430px]  left-2"></div>
+        <div className="absolute bg-gray-50 p-5 rounded-full top-[60%] md:top-[60%] md:left-2 left-2"></div>
         <button
-          className="absolute text-black top-[438px]  left-[18px] font-thin"
+          className="absolute text-black top-[63%] left-[18px] md:top-[62%] font-thin 2xl:top-[62%]"
           onClick={() => dispatch(prevSlide(slide - 1))}
         >
           <FaArrowLeft className="text-xl" />
         </button>
 
-        <div className="absolute bg-gray-50 p-5 rounded-full top-[430px]  right-2">
+        <div className="absolute bg-gray-50 p-5 rounded-full top-[60%] right-2 md:top-[60%] md:right-2">
           {" "}
         </div>
         <button
-          className="absolute text-black top-[438px]  right-[18px] font-thin"
+          className="absolute text-black top-[63%]  right-[18px] md:top-[62%] 2xl:top-[62%] font-thin"
           onClick={() => dispatch(nextSlide(slide + 1))}
         >
           <FaArrowRight className="text-xl" />

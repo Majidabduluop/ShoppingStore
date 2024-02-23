@@ -19,17 +19,14 @@ function Card({ id, name, price, color, img, text }) {
   return (
     <>
       <div className="flex flex-row shrink-0 w-full overflow-hidden relative">
-        <div
-          // onClick={() => dispatch(singleproduct(id))}
-          className="w-full  overflow-hidden bg-white hover:bg-gray-50 border rounded-lg hover:scale-95 duration-500 ease-in-out pb-12"
-        >
-          <div className="w-full h-[50vh] overflow-hidden">
+        <div className="w-full  overflow-hidden bg-white hover:bg-gray-50 border rounded-lg hover:scale-95 duration-500 ease-in-out pb-12">
+          <div className="w-full h-[50vh] overflow-hidden relative group">
             <img
               src={img}
               className="w-full h-full object-cover hover:opacity-40"
               alt="image"
             />
-            <div className="buttonquick w-full">
+            <div className="absolute 2xl:left-[35%] lg:left-[34%] top-[44%] left-[27%] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
               <Link to={`/singlepage/${id}`}>
                 <button className="px-6 py-2 font-bold bg-[#14284d] text-white rounded-xl hover:bg-gray-600">
                   Quick View

@@ -10,7 +10,7 @@ import About from "./Components/About";
 
 function App() {
   return (
-    <>
+    <div className="w-full overflow-hidden ">
       <Navbar />
 
       <Routes>
@@ -25,7 +25,7 @@ function App() {
       </Routes>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

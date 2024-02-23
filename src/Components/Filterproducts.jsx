@@ -24,23 +24,23 @@ function Filterproducts() {
 
   return (
     <>
-      <div className="ml-8 mt-32 w-full">
+      <div className="ml-4 mt-4 w-full">
         <h1 className="text-3xl ">{type}</h1>
       </div>
 
-      <div className="ml-8 mt-4">
-        <span className="text-2xl font-thin mr-12">Filter:</span>
+      <div className="lg:ml-4 ml-2 mt-6">
+        <span className="text-lg font-medium mr-2">Filter:</span>
         {genders.map((item) => (
           <button
             onClick={() => dispatch(gender(item))}
-            className=" text-black text-2xl font-thin mr-6 hover:text-blue-600"
+            className=" text-black text-xl font-thin mr-1 lg:mr-2 hover:text-blue-600"
           >
             {item}
           </button>
         ))}
         <select
           onChange={(event) => dispatch(colors(event.target.value))}
-          className="text-black text-xl font-thin mr-4 hover:text-blue-600 outline-none border-none focus:border-white focus:outline-none appearance-none "
+          className="text-black text-base font-thin mr-0 lg:mr-2 outline-none border-none focus:border-white focus:outline-none appearance-none "
         >
           {" "}
           <option>Select a Color</option>
@@ -51,7 +51,7 @@ function Filterproducts() {
 
         <select
           onChange={(e) => dispatch(sizes(e.target.value))}
-          className="text-black text-xl font-thin hover:text-blue-600 outline-none border-none focus:border-white focus:outline-none appearance-none"
+          className="text-black text-base lg:mr-12 font-thin outline-none border-none focus:border-white focus:outline-none appearance-none"
         >
           <option>Select a Size</option>
           {size.map((size, index) => (
@@ -60,13 +60,13 @@ function Filterproducts() {
         </select>
         <button
           onClick={() => dispatch(clearFilter())}
-          className=" absolute top-[220px] right-[420px] text-black text-xl px-6 py-2 rounded-lg font-thin hover:text-blue-600"
+          className="  font-semibold text-base border bg-blue-900 text-white py-1 px-1 rounded-lg  hover:bg-gray-600"
         >
           Clear Filters
         </button>
       </div>
 
-      <div className=" justify-items-center grid grid-cols-4 py-8 gap-12 mx-6  ">
+      <div className=" justify-items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:mt-6 py-8 gap-12 mx-6  ">
         {filteritems
           ? filteritems.map((itemfilter) => (
               <div>

@@ -30,14 +30,14 @@ function FrontpageItems({
 
   return (
     <>
-      <div className="bg-gray-100 border rounded-lg w-[55vh] pb-2 hover:scale-105 duration-500 ease-in-out">
-        <div className="w-[50vh] h-[40vh] mx-auto mt-2 relative group">
+      <div className="bg-gray-100 border lg:w-[28vw] sm:w-[40vw] rounded-lg w-[55vh] pb-2 hover:scale-105 transition-hover duration-500 ease-in-out">
+        <div className="lg:w-[26vw] sm:w-[38vw] w-[50vh] h-[40vh] mx-auto mt-2 relative group">
           <img
             className="w-full h-full object-cover rounded-lg hover:opacity-30"
             src={img}
             alt="image"
           />
-          <div className="absolute top-[100px] left-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out ">
+          <div className="absolute lg:left-[28%] sm:top-[44%] sm:left-[27%]  md:top-[44%] md:left-[27%] top-[44%] left-[32%] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
             <button
               onClick={() =>
                 dispatch(
@@ -60,7 +60,7 @@ function FrontpageItems({
             </button>
           </div>
         </div>
-        <div className="mt-4 text-center">
+        <div className=" mt-4 text-center">
           <span className="font-bold  text-black ">{name}</span>
           <br />
 
@@ -76,9 +76,9 @@ function FrontpageItems({
             )}
           </span>
         </div>
-        <div className="font-light text-black text-xs pb-2">
-          <span className="ml-1"> Size Left : {leftsize}</span>
-          <span className="pl-44">
+        <div className="flex ml-2 mt-1   gap-32 md:gap-44 lg:gap-36 font-light text-black text-xs">
+          <span className=""> Size Left : {leftsize}</span>
+          <span className="">
             {" "}
             Color :{" "}
             <span

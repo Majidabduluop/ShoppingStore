@@ -1,8 +1,3 @@
-/* .char {
-  transform: translateY(115px);
-  transition: transform 0.5s;
-} */
-
 .buttonquick {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -15,3 +10,10 @@
 .w-full:hover .buttonquick {
   opacity: 100;
 }
+
+/* @media (min-width: 280px) and (max-width: 390px) {
+  .Navimg {
+    position: absolute;
+    top: 50%;
+  }
+} */
