@@ -30,7 +30,7 @@ function Navigationbutton() {
 
   return (
     <>
-      <div className="flex flex-row md:gap-[20vw] md:mt-12 md:text-sm md:justify-around gap-[12vw] ml-[9%] text-sm mt-6 subpixel-antialiased">
+      <div className="flex flex-row md:gap-[20vw] md:mt-12 md:text-sm md:justify-around gap-[12vw] ml-[9%] text-sm mt-16 mb-12 subpixel-antialiased">
         <h1 className="font-bold font-sans italic">50%OFF</h1>
 
         <h1 className="font-bold font-sans italic">Free Shipping and return</h1>

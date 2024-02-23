@@ -9,7 +9,6 @@ import { MdAccountCircle } from "react-icons/md";
 import { FiShoppingCart } from "react-icons/fi";
 import { Tooltip } from "@mui/material";
 import { Link } from "react-router-dom";
-// import "../../App.css";
 
 function Navbar() {
   const [cartopen, setcartopen] = useState(false);
