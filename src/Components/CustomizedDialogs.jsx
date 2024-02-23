@@ -26,6 +26,8 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 export default function CustomizedDialogs() {
   const shoppingbag = useSelector((state) => state.basket.cart);
 
+  const totalprice = useSelector((state) => state.basket.totalprice);
+
   const params = useParams();
   const dispatch = useDispatch();
 
@@ -68,23 +70,22 @@ export default function CustomizedDialogs() {
             {shoppingbag.length > 0 ? (
               shoppingbag.map((item) => (
                 <>
-                  <div className=" relative  grid grid-cols-2 mb-4">
-                    <div>
-                      <div className="h-[14vh] w-[20%]">
+                  <div className="grid grid-cols-2 mb-12 gap-12">
+                    <div className="">
+                      <div className="h-[10vh] w-[60%]">
                         <img
-                          className="w-full h-full"
+                          className="w-full h-full object-cover"
                           src={item.img}
                           alt={item.name}
                         ></img>
                       </div>
                       <div>
-                        <h1 className="mt-1 font-bold text-sm inline-block text-blue-900">
+                        <h1 className="mt-4 font-bold text-sm  text-blue-900">
                           {item.name}
                         </h1>
-                        <p className=" text-xs">{item.text}</p>
                       </div>
                     </div>
-                    <div className="absolute right-24 top-0 text-xs">
+                    <div className="text-xs ">
                       <span className=" ">Selected Size : {item.size}</span>
 
                       <br />
@@ -97,16 +98,11 @@ export default function CustomizedDialogs() {
 
                       <span className="">Single Item Price : {item.price}</span>
                       <br />
-
-                      <span className="">
-                        Total Item Price : {item.totalPrice}
-                      </span>
-                      <br />
                       <br />
 
                       <button
                         onClick={() => dispatch(Remove(item.id))}
-                        className="border bg-blue-900 text-white rounded-lg px-6 py-1"
+                        className="border bg-blue-900 text-white rounded-lg px-4 py-1"
                       >
                         Remove
                       </button>
@@ -129,6 +125,7 @@ export default function CustomizedDialogs() {
                 </div>
               </div>
             )}
+            <p className="text-blue-900 text-lg">Total Price : {totalprice}</p>
           </Typography>
         </DialogContent>
       </BootstrapDialog>

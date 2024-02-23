@@ -42,7 +42,7 @@ function Navbar() {
         </p>
       </div>
 
-      <nav className="flex justify-between md:mt-0 mt-1 items-center w-[92%]  mx-auto">
+      <nav className="flex justify-between md:mt-0 mt-4 items-center w-[92%]  mx-auto">
         <div className="w-[14%] md:w-[8%] ">
           <img className="w-full object-fill" src={logo} alt="error" />
         </div>

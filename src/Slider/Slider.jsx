@@ -62,7 +62,7 @@ function Slider() {
         </div>
         <div className="absolute bg-gray-50 p-5 rounded-full top-[60%] md:top-[60%] md:left-2 left-2"></div>
         <button
-          className="absolute text-black top-[63%] left-[18px] md:top-[62%] font-thin 2xl:top-[62%]"
+          className="absolute text-black top-[62%] left-[18px] md:top-[62%] font-thin 2xl:top-[62%]"
           onClick={() => dispatch(prevSlide(slide - 1))}
         >
           <FaArrowLeft className="text-xl" />
@@ -72,7 +72,7 @@ function Slider() {
           {" "}
         </div>
         <button
-          className="absolute text-black top-[63%]  right-[18px] md:top-[62%] 2xl:top-[62%] font-thin"
+          className="absolute text-black top-[62%]  right-[18px] md:top-[62%] 2xl:top-[62%] font-thin"
           onClick={() => dispatch(nextSlide(slide + 1))}
         >
           <FaArrowRight className="text-xl" />
