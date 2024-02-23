@@ -45,7 +45,7 @@ export default function CustomizedDialogs() {
         open={open}
       >
         <DialogTitle
-          className="text-pink-500"
+          className="text-blue-900"
           sx={{ m: 0, p: 2 }}
           id="customized-dialog-title"
         >
@@ -78,7 +78,7 @@ export default function CustomizedDialogs() {
                         ></img>
                       </div>
                       <div>
-                        <h1 className="mt-1 font-bold text-sm inline-block text-pink-500">
+                        <h1 className="mt-1 font-bold text-sm inline-block text-blue-900">
                           {item.name}
                         </h1>
                         <p className=" text-xs">{item.text}</p>
@@ -106,7 +106,7 @@ export default function CustomizedDialogs() {
 
                       <button
                         onClick={() => dispatch(Remove(item.id))}
-                        className="border bg-pink-600 text-white rounded-lg px-6 py-1"
+                        className="border bg-blue-900 text-white rounded-lg px-6 py-1"
                       >
                         Remove
                       </button>
@@ -116,7 +116,7 @@ export default function CustomizedDialogs() {
               ))
             ) : (
               <div>
-                <h1 className="font-bold text-pink-500 font-sans mb-12">
+                <h1 className="font-bold text-blue-900 font-sans mb-12">
                   Your Basket is empty
                 </h1>
                 <p>
@@ -125,17 +125,12 @@ export default function CustomizedDialogs() {
                 </p>
 
                 <div className=" justify-center  flex py-12">
-                  <FaShoppingCart className="text-8xl text-pink-500" />
+                  <FaShoppingCart className="text-8xl text-blue-900" />
                 </div>
               </div>
             )}
           </Typography>
         </DialogContent>
-        <DialogActions>
-          <Button autoFocus onClick={handleClose}>
-            Save changes
-          </Button>
-        </DialogActions>
       </BootstrapDialog>
     </React.Fragment>
   );
