@@ -36,7 +36,7 @@ function Navigationbutton() {
         <h1 className="font-bold font-sans italic">Free Shipping and return</h1>
 
         <h1 className="font-bold font-sans italic">
-          Different Payment Methods
+          Different Payment Methodssss
         </h1>
       </div>
 
